@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Changes the forwarding phone number for ops support via SMSs according to a shared icalendar.
+
+Resources:
+  SupportRotationFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Environment:
+       Variables:
+         # Insert the actual values for phone number and calendar link and an ics calendar url
+         # Note: the chosen phone number must be in Amazon's SMS sandbox (or che account should be allowed to send to any number)
+         supportPhoneNumber: '+391234567890'
+         calendarUrl: https://calendar.url
+         calendarEncoding: 'utf-8'
+         localTz: 'Europe/Rome'
+      CodeUri: src
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      Timeout: 900 # Set to max for redundancy, actual invocations should take up to seconds
+      Architectures:
+        - x86_64
+      Policies:
+        - AmazonSNSFullAccess
+      Events:
+        CalendarCheck:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 minute)

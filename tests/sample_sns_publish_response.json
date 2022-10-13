@@ -1,0 +1,14 @@
+{
+  "MessageId":"90c8bdc4-77ce-53a0-b50d-e6f31de422c3",
+  "ResponseMetadata":{
+    "RequestId":"0cc0cac0-4507-5777-99b2-91f72f2dd614",
+    "HTTPStatusCode":200,
+    "HTTPHeaders":{
+      "x-amzn-requestid":"0cc0cac0-4507-5777-99b2-91f72f2dd614",
+      "content-type":"text/xml",
+      "content-length":"294",
+      "date":"Thu, 30 Jun 2022 09:07:53 GMT"
+    },
+    "RetryAttempts":0
+  }
+}

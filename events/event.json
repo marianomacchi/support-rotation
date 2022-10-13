@@ -1,0 +1,15 @@
+{
+  "version":"0",
+  "id":"9df9a9f2-438e-0319-2529-03538150da32",
+  "detail-type":"Scheduled Event",
+  "source":"aws.events",
+  "account":"696969696969",
+  "time":"2022-06-27T13:05:24Z",
+  "region":"eu-central-1",
+  "resources":[
+    "arn:aws:events:eu-central-1:696272404448:rule/support-rotation-stack-SupportRotationFunctionDail-3GRSPKL0JG0C"
+  ],
+  "detail":{
+
+  }
+}
